@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Navbar</title>
+    <title>IB Scrap Buyers</title>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -24,7 +24,7 @@
 
 <!-- Navbar -->
 <nav class="bg-[#003049] p-4 shadow-md">
-    <div class="max-w-screen-xl mx-auto flex md:justify-around justify-between items-center">
+    <div class="max-w-screen-xl mx-6 flex md:justify-around justify-between md:mx-0 items-center">
         <!-- Logo -->
         <a href="#" class=""><img class="h-[60px]" src="https://i.ibb.co/0jqdprF/IMG-20241217-181901-removebg-preview.png" alt=""></a>
   
@@ -58,10 +58,11 @@
 </nav>
   
 <!-- Mobile Menu -->
-<div id="mobileMenu" class="menu-slide closed fixed inset-0 bg-[#003049] bg-opacity-90 z-50 p-6 flex flex-col justify-center items-center space-y-10 items-start text-[#ffe] text-2xl">
-    <button id="closeBtn" class="self-end text-[#eff] text-3xl">
+<div id="mobileMenu" class="menu-slide overflow-y closed fixed inset-0 bg-[#003049] bg-opacity-90 z-50 py-2 flex flex-col justify-center items-center space-y-10 items-start text-[#ffe] text-2xl">
+    <button id="closeBtn" class="self-end text-[#eff] text-3xl p-2">
         <i class="fas fa-times"></i>
     </button>
+    <img class="h-[80px]" src="https://i.ibb.co/0jqdprF/IMG-20241217-181901-removebg-preview.png" alt="">
     <a href="#home" class="flex items-center hover:text-[#C1121F]">
         <i class="fas fa-home mr-2"></i> Home
     </a>
@@ -326,97 +327,99 @@
 
 <!-- Reviews Section -->
 <section id="reviews" class="py-20 px-6 bg-[#003049]">
-  <div class="max-w-screen-xl mx-auto text-center">
-      <h2 class="text-4xl font-bold text-[#FDF0D5] mb-10">What Our Customers Say</h2>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Review 1 -->
-          <div class="bg-[#FDF0D5] rounded-lg shadow-lg p-6">
-              <div class="flex justify-center mb-4">
-                  <img src="https://via.placeholder.com/100" alt="Reviewer 1" class="w-24 h-24 rounded-full object-cover border-4 border-[#C1121F]">
-              </div>
-              <h3 class="text-xl font-semibold text-[#003049] mb-2">John Doe</h3>
-              <div class="text-[#FCA311] mb-4">
-                  <!-- Star Ratings -->
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half-alt"></i>
-              </div>
-              <p class="text-[#003049]">"I recently purchased some copper materials from BrandLogo, and the quality is excellent. The customer service was also top-notch. Highly recommend!"</p>
-          </div>
-
-          <!-- Review 2 -->
-          <div class="bg-[#FDF0D5] rounded-lg shadow-lg p-6">
-              <div class="flex justify-center mb-4">
-                  <img src="https://via.placeholder.com/100" alt="Reviewer 2" class="w-24 h-24 rounded-full object-cover border-4 border-[#C1121F]">
-              </div>
-              <h3 class="text-xl font-semibold text-[#003049] mb-2">Jane Smith</h3>
-              <div class="text-[#FCA311] mb-4">
-                  <!-- Star Ratings -->
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half-alt"></i>
-                  <i class="far fa-star"></i>
-              </div>
-              <p class="text-[#003049]">"The aluminium products I ordered arrived on time and were exactly what I needed for my project. Very happy with my purchase!"</p>
-          </div>
-
-          <!-- Review 3 -->
-          <div class="bg-[#FDF0D5] rounded-lg shadow-lg p-6">
-              <div class="flex justify-center mb-4">
-                  <img src="https://via.placeholder.com/100" alt="Reviewer 3" class="w-24 h-24 rounded-full object-cover border-4 border-[#C1121F]">
-              </div>
-              <h3 class="text-xl font-semibold text-[#003049] mb-2">Samuel Lee</h3>
-              <div class="text-[#FCA311] mb-4">
-                  <!-- Star Ratings -->
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-              </div>
-              <p class="text-[#003049]">"The machines I purchased from BrandLogo helped streamline our production process. They are reliable, easy to use, and incredibly efficient."</p>
-          </div>
-
-          <!-- Review 4 -->
-          <div class="bg-[#FDF0D5] rounded-lg shadow-lg p-6">
-              <div class="flex justify-center mb-4">
-                  <img src="https://via.placeholder.com/100" alt="Reviewer 4" class="w-24 h-24 rounded-full object-cover border-4 border-[#C1121F]">
-              </div>
-              <h3 class="text-xl font-semibold text-[#003049] mb-2">Maria Garcia</h3>
-              <div class="text-[#FCA311] mb-4">
-                  <!-- Star Ratings -->
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half-alt"></i>
-              </div>
-              <p class="text-[#003049]">"The wires and cables I ordered for my electrical project were of great quality. The customer support team was also very helpful in answering my questions."</p>
-          </div>
-
-          <!-- Review 5 -->
-          <div class="bg-[#FDF0D5] rounded-lg shadow-lg p-6">
-              <div class="flex justify-center mb-4">
-                  <img src="https://via.placeholder.com/100" alt="Reviewer 5" class="w-24 h-24 rounded-full object-cover border-4 border-[#C1121F]">
-              </div>
-              <h3 class="text-xl font-semibold text-[#003049] mb-2">David Wilson</h3>
-              <div class="text-[#FCA311] mb-4">
-                  <!-- Star Ratings -->
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-              </div>
-              <p class="text-[#003049]">"I bought a scrap vehicle from BrandLogo, and the process was smooth. They handled everything professionally, and I got a fair price for my old car. Will definitely use their services again!"</p>
-          </div>
-      </div>
-  </div>
-</section>
+    <div class="max-w-screen-xl mx-auto text-center">
+        <h2 class="text-4xl font-bold text-[#FDF0D5] mb-10">What Our Sellers Say</h2>
+  
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Review 1 -->
+            <div class="bg-[#FDF0D5] rounded-lg shadow-lg p-6">
+                <div class="flex justify-center mb-4">
+                    <img src="https://www.gravatar.com/avatar/b4b147cc2a29a0298e92943308d0ba07?s=100&d=mp" alt="Seller 1" class="w-24 h-24 rounded-full object-cover border-4 border-[#C1121F]">
+                </div>
+                <h3 class="text-xl font-semibold text-[#003049] mb-2">Faisal</h3>
+                <div class="text-[#FCA311] mb-4">
+                    <!-- Star Ratings -->
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p class="text-[#003049]">"I’ve been partnering with IB Scrap Buyers for a while now, and they have always been responsive and efficient. Working with them has made our sales process smoother and more reliable. Highly recommend!"</p>
+            </div>
+  
+            <!-- Review 2 -->
+            <div class="bg-[#FDF0D5] rounded-lg shadow-lg p-6">
+                <div class="flex justify-center mb-4">
+                    <img src="https://www.gravatar.com/avatar/d63c2d5f897b59d89a77d7287e8e8cba?s=100&d=mp" alt="Seller 2" class="w-24 h-24 rounded-full object-cover border-4 border-[#C1121F]">
+                </div>
+                <h3 class="text-xl font-semibold text-[#003049] mb-2">Anwar</h3>
+                <div class="text-[#FCA311] mb-4">
+                    <!-- Star Ratings -->
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p class="text-[#003049]">"The platform is well-organized, and their customer service is always there when we need them. It’s been a pleasure working with IB Scrap Buyers to sell our aluminium products!"</p>
+            </div>
+  
+            <!-- Review 3 -->
+            <div class="bg-[#FDF0D5] rounded-lg shadow-lg p-6">
+                <div class="flex justify-center mb-4">
+                    <img src="https://www.gravatar.com/avatar/28c876c52c3a1b8f5d1040b7eb6e539f?s=100&d=mp" alt="Seller 3" class="w-24 h-24 rounded-full object-cover border-4 border-[#C1121F]">
+                </div>
+                <h3 class="text-xl font-semibold text-[#003049] mb-2">Raheem</h3>
+                <div class="text-[#FCA311] mb-4">
+                    <!-- Star Ratings -->
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="text-[#003049]">"IB Scrap Buyers has made it incredibly easy for us to sell our machinery. Their system is user-friendly, and they handle the logistics seamlessly. A great partner for our business!"</p>
+            </div>
+  
+            <!-- Review 4 -->
+            <div class="bg-[#FDF0D5] rounded-lg shadow-lg p-6">
+                <div class="flex justify-center mb-4">
+                    <img src="https://www.gravatar.com/avatar/abb11f6fd8c75954f50d1e46c228e4e3?s=100&d=mp" alt="Seller 4" class="w-24 h-24 rounded-full object-cover border-4 border-[#C1121F]">
+                </div>
+                <h3 class="text-xl font-semibold text-[#003049] mb-2">Rakesh</h3>
+                <div class="text-[#FCA311] mb-4">
+                    <!-- Star Ratings -->
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p class="text-[#003049]">"Selling through IB Scrap Buyers has been a rewarding experience. They provide excellent customer support, and their platform makes it easy to reach more customers." </p>
+            </div>
+  
+            <!-- Review 5 -->
+            <div class="bg-[#FDF0D5] rounded-lg shadow-lg p-6">
+                <div class="flex justify-center mb-4">
+                    <img src="https://www.gravatar.com/avatar/a1bb78d1660d34836db63e34e6098cbb?s=100&d=mp" alt="Seller 5" class="w-24 h-24 rounded-full object-cover border-4 border-[#C1121F]">
+                </div>
+                <h3 class="text-xl font-semibold text-[#003049] mb-2">Raju</h3>
+                <div class="text-[#FCA311] mb-4">
+                    <!-- Star Ratings -->
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="text-[#003049]">"IB Scrap Buyers has been a fantastic platform to sell my scrap vehicles. The process is quick, the team is reliable, and I always get a fair price. Great experience!"</p>
+            </div>
+        </div>
+    </div>
+  </section>
+  
+  
 
 
 
@@ -429,7 +432,7 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
           <!-- Service 1: Fast -->
           <div class="bg-[#FDF0D5] rounded-lg shadow-lg p-8 text-center border-4 border-[#C1121F]">
-              <div class="text-5xl text-[#FCA311] mb-6">
+              <div class="text-5xl text-[#003049] mb-6">
                   <i class="fas fa-bolt"></i>
               </div>
               <h3 class="text-2xl font-semibold text-[#003049] mb-4">Fast Service</h3>
@@ -441,7 +444,7 @@
 
           <!-- Service 2: Reliable -->
           <div class="bg-[#FDF0D5] rounded-lg shadow-lg p-8 text-center border-4 border-[#C1121F]">
-              <div class="text-5xl text-[#FCA311] mb-6">
+              <div class="text-5xl text-[#003049] mb-6">
                   <i class="fas fa-check-circle"></i>
               </div>
               <h3 class="text-2xl font-semibold text-[#003049] mb-4">Reliable Products</h3>
@@ -453,7 +456,7 @@
 
           <!-- Service 3: Trustworthy -->
           <div class="bg-[#FDF0D5] rounded-lg shadow-lg p-8 text-center border-4 border-[#C1121F]">
-              <div class="text-5xl text-[#FCA311] mb-6">
+              <div class="text-5xl text-[#003049] mb-6">
                   <i class="fas fa-handshake"></i>
               </div>
               <h3 class="text-2xl font-semibold text-[#003049] mb-4">Trustworthy Business</h3>
@@ -509,7 +512,7 @@
 
     <!-- Contact Image (Right Side) -->
     <div class="md:w-2/5 w-full md:ml-[200px]">
-      <img src="https://via.placeholder.com/600x400" alt="Contact Us" class="w-full h-full object-cover rounded-lg shadow-lg">
+      <img src="https://media.istockphoto.com/id/1313742092/photo/business-partnership-business-man-investor-handshake-with-effect-global-network-link.webp?a=1&b=1&s=612x612&w=0&k=20&c=NeBMURIA84VyV27Zf7csWWS4FlTYJ_9LMMo13K_Gnq8=" alt="Contact Us" class="w-full h-full object-cover rounded-lg shadow-lg">
     </div>
   </div>
 </section>
