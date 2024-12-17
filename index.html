@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +20,7 @@
         }
     </style>
 </head>
-<body class="font-sans bg-gray-100">
+<body class="font-sans bg-gray-100 scroll-smooth">
 
 <!-- Navbar -->
 <nav class="bg-[#003049] p-4 shadow-md">
@@ -154,6 +154,33 @@
       </div>
   </div>
 </section>
+
+<!-- Call Button Section -->
+<section class="fixed left-7 top-1/2 transform -translate-y-1/2 z-50">
+    <a href="tel:+91 9700434163" class="relative group flex items-center justify-center w-16 h-16 bg-[#C1121F] rounded-full text-white shadow-lg transition-transform transform hover:scale-110">
+        <!-- Call Icon -->
+        <i class="fas fa-phone-alt text-2xl"></i>
+        
+        <!-- Sliding Details on Hover -->
+        <span class="absolute left-20 opacity-0 group-hover:opacity-100 group-hover:left-16 transition-all duration-300 text-sm bg-[#003049] text-[#FDF0D5] rounded-lg p-2">
+            Call Us
+        </span>
+    </a>
+</section>
+
+<!-- WhatsApp Button Section -->
+<section class="fixed right-7 top-1/2 transform -translate-y-1/2 z-50">
+    <a href="https://wa.me/9700434163" target="_blank" class="relative group flex items-center justify-center w-16 h-16 bg-[#25D366] rounded-full text-white shadow-lg transition-transform transform hover:scale-110">
+        <!-- WhatsApp Icon -->
+        <i class="fab fa-whatsapp text-2xl"></i>
+        
+        <!-- Sliding Details on Hover -->
+        <span class="absolute right-20 opacity-0 group-hover:opacity-100 group-hover:right-16 transition-all duration-300 text-sm bg-[#003049] text-[#FDF0D5] rounded-lg p-2">
+            Chat with Us
+        </span>
+    </a>
+</section>
+
 
 
 
@@ -524,7 +551,7 @@
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
   // Initialize EmailJS
-  emailjs.init('your_user_id'); // Replace 'your_user_id' with your actual EmailJS user ID
+  emailjs.init('5XFFIebMGue165nA6'); // Replace 'your_user_id' with your actual EmailJS user ID
 
   // Function to handle the form submission
   function sendEmail(event) {
@@ -536,7 +563,7 @@
       const message = document.getElementById('message').value;
 
       // Send the email via EmailJS
-      emailjs.sendForm('your_service_id', 'your_template_id', '#contactForm')
+      emailjs.sendForm('service_hrearau', 'template_8jtlkuy', '#contactForm')
           .then((response) => {
               // On success, show a success message
               document.getElementById('statusMessage').innerHTML = "Your message has been sent successfully!";
