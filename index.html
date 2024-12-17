@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Custom styles for sliding effect */
+        .menu-slide {
+            transition: transform 0.3s ease-in-out;
+        }
+        .menu-slide.open {
+            transform: translateX(0);
+        }
+        .menu-slide.closed {
+            transform: translateX(100%);
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-100">
+
+<!-- Navbar -->
+<nav class="bg-[#003049] p-4 shadow-md">
+    <div class="max-w-screen-xl mx-auto flex md:justify-around justify-between items-center">
+        <!-- Logo -->
+        <a href="#" class=""><img class="h-[60px]" src="https://i.ibb.co/0jqdprF/IMG-20241217-181901-removebg-preview.png" alt=""></a>
+  
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex space-x-6 text-[#ffe] text-lg uppercase font-semibold">
+            <a href="#home" class="flex items-center hover:text-[#C1121F]">
+                <i class="fas fa-home mr-2"></i> Home
+            </a>
+            <a href="#about" class="flex items-center hover:text-[#C1121F]">
+                <i class="fas fa-info-circle mr-2"></i> About
+            </a>
+            <a href="#products" class="flex items-center hover:text-[#C1121F]">
+                <i class="fas fa-box mr-2"></i> Products
+            </a>
+            <a href="#reviews" class="flex items-center hover:text-[#C1121F]">
+                <i class="fas fa-star mr-2"></i> Reviews
+            </a>
+            <a href="#services" class="flex items-center hover:text-[#C1121F]">
+                <i class="fas fa-cogs mr-2"></i> Services
+            </a>
+            <a href="#contact" class="flex items-center hover:text-[#C1121F]">
+                <i class="fas fa-phone mr-2"></i> Contact
+            </a>
+        </div>
+  
+        <!-- Hamburger Icon for Mobile -->
+        <button class="md:hidden text-[#eef] text-3xl" id="hamburgerBtn">
+            <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+    </div>
+</nav>
+  
+<!-- Mobile Menu -->
+<div id="mobileMenu" class="menu-slide closed fixed inset-0 bg-[#003049] bg-opacity-90 z-50 p-6 flex flex-col justify-center items-center space-y-10 items-start text-[#ffe] text-2xl">
+    <button id="closeBtn" class="self-end text-[#eff] text-3xl">
+        <i class="fas fa-times"></i>
+    </button>
+    <a href="#home" class="flex items-center hover:text-[#C1121F]">
+        <i class="fas fa-home mr-2"></i> Home
+    </a>
+    <a href="#about" class="flex items-center hover:text-[#C1121F]">
+        <i class="fas fa-info-circle mr-2"></i> About
+    </a>
+    <a href="#products" class="flex items-center hover:text-[#C1121F]">
+        <i class="fas fa-box mr-2"></i> Products
+    </a>
+    <a href="#reviews" class="flex items-center hover:text-[#C1121F]">
+        <i class="fas fa-star mr-2"></i> Reviews
+    </a>
+    <a href="#services" class="flex items-center hover:text-[#C1121F]">
+        <i class="fas fa-cogs mr-2"></i> Services
+    </a>
+    <a href="#contact" class="flex items-center hover:text-[#C1121F]">
+        <i class="fas fa-phone mr-2"></i> Contact
+    </a>
+</div>
+
+  
+  
+
+
+    <!-- JS Script for Hamburger and Menu -->
+    <script>
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const closeBtn = document.getElementById('closeBtn');
+
+        // Open mobile menu
+        hamburgerBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('closed');
+            mobileMenu.classList.add('open');
+        });
+
+        // Close mobile menu
+        closeBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('open');
+            mobileMenu.classList.add('closed');
+        });
+    </script>
+    <!-- Home Section -->
+    <section class="hero-bg py-[140px] flex flex-col justify-center items-center bg-[#003049] bg-opacity-80 text-white text-center relative">
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-[#000000] opacity-50 blur-[2px]"><img class="w-[100%] h-[100%]" src="https://media.istockphoto.com/id/466548585/photo/pile-of-aluminium-scrap.jpg?s=612x612&w=0&k=20&c=W1irvAfseW0yDHBgcH9d7KwtoDlyVL0Y3Too4z_5ajk=" alt=""></div>
+
+    <!-- Content -->
+    <div class="relative z-10 space-y-6 px-4">
+        <!-- Logo -->
+        <div class="text-4xl md:text-6xl font-extrabold tracking-wider text-[#FDF0D5]">
+            <a href="#" class="flex justify-center"><img class="h-[150px]" src="https://i.ibb.co/0jqdprF/IMG-20241217-181901-removebg-preview.png" alt=""></a>
+            <h1 class="text-3x font-semibold" >Scrap Buyers</h1>
+        </div>
+
+        <!-- Description -->
+        <p class="text-lg md:text-2xl max-w-3xl mx-auto text-[#FDF0D5] opacity-90">
+            Welcome to BrandLogo. We are dedicated to providing top-quality products that enhance your experience. Join us on a journey of innovation, passion, and excellence.
+        </p>
+
+        <!-- Call to Action Button -->
+        <a href="#products" class="bg-[#C1121F] hover:bg-[#780000] text-[#FDF0D5] text-lg px-8 py-3 relative top-7 rounded-full transition duration-300 transform hover:scale-105">
+            Explore Our Products
+        </a>
+    </div>
+</section>
+
+  
+    
+<!-- About Us Section -->
+<section id="about" class="py-20 px-6 bg-[#003049]">
+  <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center md:justify-around justify-between space-y-8 md:space-y-0">
+      <!-- Left Side: Text -->
+      <div class="md:w-[40%] space-y-6 text-center md:text-left text-[#FDF0D5]">
+          <h2 class="text-4xl font-bold text-[#FDF0D5]">About Us</h2>
+          <p class="text-lg md:text-xl text-[#669BBC]">
+              At BrandLogo, we are passionate about delivering high-quality products that elevate your lifestyle.
+              With years of experience, our team is dedicated to innovation and customer satisfaction.
+              Whether you're looking for the latest technology or reliable services, we have everything you need to take your journey forward.
+          </p>
+          <p class="text-lg md:text-xl text-[#FDF0D5]">
+              Our mission is simple: to provide top-notch products that exceed your expectations. Join us as we continue to grow, innovate, and inspire.
+          </p>
+      </div>
+      
+      <!-- Right Side: Image -->
+      <div class="md:w-[40%]">
+          <img src="https://media.istockphoto.com/id/94987133/photo/scrapyard-for-obsolete-household-goods.webp?a=1&b=1&s=612x612&w=0&k=20&c=FYVwmVU9yQL_0rZJXzi27RDw1O2yx6-FAWmUFpwrP0Y=" alt="About Us Image" class="w-full rounded-lg shadow-2xl border-4 border-[#C1121F] object-cover">
+      </div>
+  </div>
+</section>
+
+
+
+<!-- Products Section -->
+<section id="products" class="py-20 px-6 bg-[#003049]">
+    <div class="max-w-screen-xl mx-auto text-center">
+        <h2 class="text-4xl font-bold text-[#FDF0D5] mb-10">Our Products</h2>
+  
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Product 1: Copper -->
+            <div class="bg-[#FDF0D5] rounded-lg shadow-lg overflow-hidden">
+                <img src="https://media.istockphoto.com/id/496193141/photo/copper-wires-recycling.webp?a=1&b=1&s=612x612&w=0&k=20&c=MsrmhLi5drBMegaK0ldpQ5BobXbvUzSEw3yOZA2lNgA=" alt="Copper" class="w-full h-72 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-[#003049] mb-4">Copper</h3>
+                    <p class="text-[#003049] mb-4">Our high-quality copper products are ideal for electrical applications, construction, and manufacturing.</p>
+                    <a href="#contact" class="bg-[#C1121F] hover:bg-[#780000] text-[#FDF0D5] px-6 py-2 rounded-full inline-flex items-center justify-center">
+                        <i class="fas fa-phone-alt mr-2"></i> Contact Us
+                    </a>
+                </div>
+            </div>
+  
+            <!-- Product 2: Brass -->
+            <div class="bg-[#FDF0D5] rounded-lg shadow-lg overflow-hidden">
+                <img src="https://media.istockphoto.com/id/468187416/photo/household-scrap.webp?a=1&b=1&s=612x612&w=0&k=20&c=YEiHqso4wwqKl_5NH4iVkAL6oxfgb7mNE7KvzizrK0I=" alt="Brass" class="w-full h-72 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-[#003049] mb-4">Brass</h3>
+                    <p class="text-[#003049] mb-4">Durable brass products for use in plumbing, hardware, and decorative items.</p>
+                    <a href="#contact" class="bg-[#C1121F] hover:bg-[#780000] text-[#FDF0D5] px-6 py-2 rounded-full inline-flex items-center justify-center">
+                        <i class="fas fa-phone-alt mr-2"></i> Contact Us
+                    </a>
+                </div>
+            </div>
+  
+            <!-- Product 3: Wood -->
+            <div class="bg-[#FDF0D5] rounded-lg shadow-lg overflow-hidden">
+                <img src="https://media.istockphoto.com/id/171298139/photo/scrap-wood.webp?a=1&b=1&s=612x612&w=0&k=20&c=ZIDCdFLLz97KnLGFEe7j-cn4YGsXYvdDDRXrK6Kd6EY=" alt="Wood" class="w-full h-72 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-[#003049] mb-4">Wood</h3>
+                    <p class="text-[#003049] mb-4">High-quality wood materials for construction, furniture, and interior design projects.</p>
+                    <a href="#contact" class="bg-[#C1121F] hover:bg-[#780000] text-[#FDF0D5] px-6 py-2 rounded-full inline-flex items-center justify-center">
+                        <i class="fas fa-phone-alt mr-2"></i> Contact Us
+                    </a>
+                </div>
+            </div>
+  
+            <!-- Product 4: Aluminium -->
+            <div class="bg-[#FDF0D5] rounded-lg shadow-lg overflow-hidden">
+                <img src="https://media.istockphoto.com/id/133993685/photo/scrap-metal-pieces-laying-in-a-pile.webp?a=1&b=1&s=612x612&w=0&k=20&c=_o5yXsN3zw2sXXszNDJGDh6ACJItv3CogGLNIstdgT0=" alt="Aluminium" class="w-full h-72 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-[#003049] mb-4">Aluminium</h3>
+                    <p class="text-[#003049] mb-4">Lightweight and durable aluminium products for industrial, automotive, and aerospace use.</p>
+                    <a href="#contact" class="bg-[#C1121F] hover:bg-[#780000] text-[#FDF0D5] px-6 py-2 rounded-full inline-flex items-center justify-center">
+                        <i class="fas fa-phone-alt mr-2"></i> Contact Us
+                    </a>
+                </div>
+            </div>
+  
+            <!-- Product 5: Machines -->
+            <div class="bg-[#FDF0D5] rounded-lg shadow-lg overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1469389335181-2198b4caa734?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWFjaGluZSUyMHNjcmFwfGVufDB8fDB8fHww" alt="Machines" class="w-full h-72 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-[#003049] mb-4">Machines</h3>
+                    <p class="text-[#003049] mb-4">Industrial machines and equipment that enhance productivity and efficiency in various sectors.</p>
+                    <a href="#contact" class="bg-[#C1121F] hover:bg-[#780000] text-[#FDF0D5] px-6 py-2 rounded-full inline-flex items-center justify-center">
+                        <i class="fas fa-phone-alt mr-2"></i> Contact Us
+                    </a>
+                </div>
+            </div>
+  
+            <!-- Product 6: Motors -->
+            <div class="bg-[#FDF0D5] rounded-lg shadow-lg overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1600368544663-05493ab49549?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bW90b3JzJTIwc2NyYXB8ZW58MHx8MHx8fDA%3D" alt="Motors" class="w-full h-72 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-[#003049] mb-4">Motors</h3>
+                    <p class="text-[#003049] mb-4">A wide range of motors suitable for automotive, industrial, and domestic applications.</p>
+                    <a href="#contact" class="bg-[#C1121F] hover:bg-[#780000] text-[#FDF0D5] px-6 py-2 rounded-full inline-flex items-center justify-center">
+                        <i class="fas fa-phone-alt mr-2"></i> Contact Us
+                    </a>
+                </div>
+            </div>
+  
+            <!-- Product 7: Wires -->
+            <div class="bg-[#FDF0D5] rounded-lg shadow-lg overflow-hidden">
+                <img src="https://media.istockphoto.com/id/1288641819/photo/scrap-cables-and-wires-ready-for-recycling.webp?a=1&b=1&s=612x612&w=0&k=20&c=A60b7ofX05y_TV_XjRF9tew3osnTITow34HKYXQxPng=" alt="Wires" class="w-full h-72 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-[#003049] mb-4">Wires</h3>
+                    <p class="text-[#003049] mb-4">Reliable and durable wires for electrical, telecommunication, and construction industries.</p>
+                    <a href="#contact" class="bg-[#C1121F] hover:bg-[#780000] text-[#FDF0D5] px-6 py-2 rounded-full inline-flex items-center justify-center">
+                        <i class="fas fa-phone-alt mr-2"></i> Contact Us
+                    </a>
+                </div>
+            </div>
+  
+            <!-- Product 8: Cables -->
+            <div class="bg-[#FDF0D5] rounded-lg shadow-lg overflow-hidden">
+                <img src="https://media.istockphoto.com/id/1014809576/photo/various-cable-scrap-as-background-on-the-subject-of-recycling.webp?a=1&b=1&s=612x612&w=0&k=20&c=E0hDiShenfh4o4nOv4Aa6tl3c6hmTDNmJTUQw7UizPk=" alt="Cables" class="w-full h-72 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-[#003049] mb-4">Cables</h3>
+                    <p class="text-[#003049] mb-4">A comprehensive selection of cables for various electrical and communication needs.</p>
+                    <a href="#contact" class="bg-[#C1121F] hover:bg-[#780000] text-[#FDF0D5] px-6 py-2 rounded-full inline-flex items-center justify-center">
+                        <i class="fas fa-phone-alt mr-2"></i> Contact Us
+                    </a>
+                </div>
+            </div>
+  
+            <!-- Product 9: Electronics -->
+            <div class="bg-[#FDF0D5] rounded-lg shadow-lg overflow-hidden">
+                <img src="https://media.istockphoto.com/id/177250877/photo/electronic-waste.webp?a=1&b=1&s=612x612&w=0&k=20&c=EVm6klMKikXAZckRXyYzI_7caOuTM3IEU2TCn6Ctz_0=" alt="Electronics" class="w-full h-72 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-[#003049] mb-4">Electronics</h3>
+                    <p class="text-[#003049] mb-4">High-tech electronics for consumer, industrial, and professional applications.</p>
+                    <a href="#contact" class="bg-[#C1121F] hover:bg-[#780000] text-[#FDF0D5] px-6 py-2 rounded-full inline-flex items-center justify-center">
+                        <i class="fas fa-phone-alt mr-2"></i> Contact Us
+                    </a>
+                </div>
+            </div>
+  
+            <!-- Product 10: Scrap Vehicles -->
+            <div class="bg-[#FDF0D5] rounded-lg shadow-lg overflow-hidden">
+                <img src="https://media.istockphoto.com/id/157290315/photo/scrap-vehicles.webp?a=1&b=1&s=612x612&w=0&k=20&c=oayPci2d9uqnrf6s0YNIZX45veINEL2UvzPD5cYhZtE=" alt="Scrap Vehicles" class="w-full h-72 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-[#003049] mb-4">Scrap Vehicles</h3>
+                    <p class="text-[#003049] mb-4">We offer scrap vehicle removal services and recycle parts for reuse.</p>
+                    <a href="#contact" class="bg-[#C1121F] hover:bg-[#780000] text-[#FDF0D5] px-6 py-2 rounded-full inline-flex items-center justify-center">
+                        <i class="fas fa-phone-alt mr-2"></i> Contact Us
+                    </a>
+                </div>
+            </div>
+  
+            <!-- Product 11: AC -->
+            <div class="bg-[#FDF0D5] rounded-lg shadow-lg overflow-hidden">
+                <img src="https://media.istockphoto.com/id/1075628478/photo/discarded-electrical-appliances.webp?a=1&b=1&s=612x612&w=0&k=20&c=JAE-nXhwUNsQLo2RYlxlY5dS2Bl3m-k_cIioM_lsAYc=" alt="AC" class="w-full h-72 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-[#003049] mb-4">AC (Air Conditioners)</h3>
+                    <p class="text-[#003049] mb-4">Energy-efficient air conditioners designed for residential and commercial spaces.</p>
+                    <a href="#contact" class="bg-[#C1121F] hover:bg-[#780000] text-[#FDF0D5] px-6 py-2 rounded-full inline-flex items-center justify-center">
+                        <i class="fas fa-phone-alt mr-2"></i> Contact Us
+                    </a>
+                </div>
+            </div>
+  
+            <!-- Product 12: Iron -->
+            <div class="bg-[#FDF0D5] rounded-lg shadow-lg overflow-hidden">
+                <img src="https://media.istockphoto.com/id/807897570/photo/scrap-metal-and-aluminium.webp?a=1&b=1&s=612x612&w=0&k=20&c=Sn7yVVobHXiwp5R2bM00Jck3oD375M8YaCzjlY40Ddo=" alt="Iron" class="w-full h-72 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-[#003049] mb-4">Iron</h3>
+                    <p class="text-[#003049] mb-4">Strong, durable iron products for construction, machinery, and manufacturing.</p>
+                    <a href="#contact" class="bg-[#C1121F] hover:bg-[#780000] text-[#FDF0D5] px-6 py-2 rounded-full inline-flex items-center justify-center">
+                        <i class="fas fa-phone-alt mr-2"></i> Contact Us
+                    </a>
+                </div>
+            </div>
+  
+            <!-- Product 13: Silver -->
+            <div class="bg-[#FDF0D5] rounded-lg shadow-lg overflow-hidden">
+                <img src="https://media.istockphoto.com/id/502279505/photo/pile-of-scrap-metal-utensils.webp?a=1&b=1&s=612x612&w=0&k=20&c=cgkI4iWBgXTUvBbSyaT8dwQUVfZjFlVzAovOEKMgU6o=" alt="Silver" class="w-full h-72 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-[#003049] mb-4">Silver</h3>
+                    <p class="text-[#003049] mb-4">Premium silver products for jewelry, electronics, and industrial applications.</p>
+                    <a href="#contact" class="bg-[#C1121F] hover:bg-[#780000] text-[#FDF0D5] px-6 py-2 rounded-full inline-flex items-center justify-center">
+                        <i class="fas fa-phone-alt mr-2"></i> Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  
+
+
+
+<!-- Reviews Section -->
+<section id="reviews" class="py-20 px-6 bg-[#003049]">
+  <div class="max-w-screen-xl mx-auto text-center">
+      <h2 class="text-4xl font-bold text-[#FDF0D5] mb-10">What Our Customers Say</h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Review 1 -->
+          <div class="bg-[#FDF0D5] rounded-lg shadow-lg p-6">
+              <div class="flex justify-center mb-4">
+                  <img src="https://via.placeholder.com/100" alt="Reviewer 1" class="w-24 h-24 rounded-full object-cover border-4 border-[#C1121F]">
+              </div>
+              <h3 class="text-xl font-semibold text-[#003049] mb-2">John Doe</h3>
+              <div class="text-[#FCA311] mb-4">
+                  <!-- Star Ratings -->
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+              </div>
+              <p class="text-[#003049]">"I recently purchased some copper materials from BrandLogo, and the quality is excellent. The customer service was also top-notch. Highly recommend!"</p>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="bg-[#FDF0D5] rounded-lg shadow-lg p-6">
+              <div class="flex justify-center mb-4">
+                  <img src="https://via.placeholder.com/100" alt="Reviewer 2" class="w-24 h-24 rounded-full object-cover border-4 border-[#C1121F]">
+              </div>
+              <h3 class="text-xl font-semibold text-[#003049] mb-2">Jane Smith</h3>
+              <div class="text-[#FCA311] mb-4">
+                  <!-- Star Ratings -->
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <i class="far fa-star"></i>
+              </div>
+              <p class="text-[#003049]">"The aluminium products I ordered arrived on time and were exactly what I needed for my project. Very happy with my purchase!"</p>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="bg-[#FDF0D5] rounded-lg shadow-lg p-6">
+              <div class="flex justify-center mb-4">
+                  <img src="https://via.placeholder.com/100" alt="Reviewer 3" class="w-24 h-24 rounded-full object-cover border-4 border-[#C1121F]">
+              </div>
+              <h3 class="text-xl font-semibold text-[#003049] mb-2">Samuel Lee</h3>
+              <div class="text-[#FCA311] mb-4">
+                  <!-- Star Ratings -->
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+              </div>
+              <p class="text-[#003049]">"The machines I purchased from BrandLogo helped streamline our production process. They are reliable, easy to use, and incredibly efficient."</p>
+          </div>
+
+          <!-- Review 4 -->
+          <div class="bg-[#FDF0D5] rounded-lg shadow-lg p-6">
+              <div class="flex justify-center mb-4">
+                  <img src="https://via.placeholder.com/100" alt="Reviewer 4" class="w-24 h-24 rounded-full object-cover border-4 border-[#C1121F]">
+              </div>
+              <h3 class="text-xl font-semibold text-[#003049] mb-2">Maria Garcia</h3>
+              <div class="text-[#FCA311] mb-4">
+                  <!-- Star Ratings -->
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+              </div>
+              <p class="text-[#003049]">"The wires and cables I ordered for my electrical project were of great quality. The customer support team was also very helpful in answering my questions."</p>
+          </div>
+
+          <!-- Review 5 -->
+          <div class="bg-[#FDF0D5] rounded-lg shadow-lg p-6">
+              <div class="flex justify-center mb-4">
+                  <img src="https://via.placeholder.com/100" alt="Reviewer 5" class="w-24 h-24 rounded-full object-cover border-4 border-[#C1121F]">
+              </div>
+              <h3 class="text-xl font-semibold text-[#003049] mb-2">David Wilson</h3>
+              <div class="text-[#FCA311] mb-4">
+                  <!-- Star Ratings -->
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+              </div>
+              <p class="text-[#003049]">"I bought a scrap vehicle from BrandLogo, and the process was smooth. They handled everything professionally, and I got a fair price for my old car. Will definitely use their services again!"</p>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+
+<!-- Services Section -->
+<section id="services" class="py-20 px-6 bg-[#003049]">
+  <div class="max-w-screen-xl mx-auto text-center">
+      <h2 class="text-4xl font-bold text-[#FDF0D5] mb-10">Our Services</h2>
+      
+      <!-- Services Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+          <!-- Service 1: Fast -->
+          <div class="bg-[#FDF0D5] rounded-lg shadow-lg p-8 text-center border-4 border-[#C1121F]">
+              <div class="text-5xl text-[#FCA311] mb-6">
+                  <i class="fas fa-bolt"></i>
+              </div>
+              <h3 class="text-2xl font-semibold text-[#003049] mb-4">Fast Service</h3>
+              <p class="text-[#003049] mb-6">We understand the value of your time. Our fast service ensures that your orders and requests are processed efficiently and delivered quickly, every time.</p>
+              <a href="#contact" class="bg-[#C1121F] hover:bg-[#780000] text-white px-6 py-2 rounded-full inline-flex items-center justify-center">
+                  <i class="fas fa-phone-alt mr-2"></i> Contact Us
+              </a>
+          </div>
+
+          <!-- Service 2: Reliable -->
+          <div class="bg-[#FDF0D5] rounded-lg shadow-lg p-8 text-center border-4 border-[#C1121F]">
+              <div class="text-5xl text-[#FCA311] mb-6">
+                  <i class="fas fa-check-circle"></i>
+              </div>
+              <h3 class="text-2xl font-semibold text-[#003049] mb-4">Reliable Products</h3>
+              <p class="text-[#003049] mb-6">When you choose our products and services, you're choosing quality you can trust. We provide reliable, long-lasting products for all your needs.</p>
+              <a href="#contact" class="bg-[#C1121F] hover:bg-[#780000] text-white px-6 py-2 rounded-full inline-flex items-center justify-center">
+                  <i class="fas fa-phone-alt mr-2"></i> Contact Us
+              </a>
+          </div>
+
+          <!-- Service 3: Trustworthy -->
+          <div class="bg-[#FDF0D5] rounded-lg shadow-lg p-8 text-center border-4 border-[#C1121F]">
+              <div class="text-5xl text-[#FCA311] mb-6">
+                  <i class="fas fa-handshake"></i>
+              </div>
+              <h3 class="text-2xl font-semibold text-[#003049] mb-4">Trustworthy Business</h3>
+              <p class="text-[#003049] mb-6">We pride ourselves on our integrity. Our customers trust us to deliver on our promises and provide transparent, honest services every time.</p>
+              <a href="#contact" class="bg-[#C1121F] hover:bg-[#780000] text-white px-6 py-2 rounded-full inline-flex items-center justify-center">
+                  <i class="fas fa-phone-alt mr-2"></i> Contact Us
+              </a>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+
+<!-- Contact Section -->
+<section id="contact" class="py-20 px-6 bg-[#003049]">
+  <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center">
+    <!-- Contact Form (Left Side) -->
+    <div class="md:w-2/5 w-full space-y-6 md:mr-12 mb-8 md:mb-0">
+      
+      <!-- Contact Form -->
+      <form id="contactForm" class="space-y-6 scale-[.8]" onsubmit="sendEmail(event)">
+        <h2 class="text-4xl font-bold text-[#FDF0D5] text-center md:text-left mb-6">Contact Us</h2>
+        
+        <!-- Name Field -->
+        <div>
+          <label for="name" class="block text-[#FDF0D5] text-lg mb-2">Your Name</label>
+          <input type="text" id="name" name="name" class="w-full p-4 border border-[#C1121F] rounded-lg text-[#092327]" required>
+        </div>
+
+        <!-- Email Field -->
+        <div>
+          <label for="email" class="block text-[#FDF0D5] text-lg mb-2">Your Email</label>
+          <input type="email" id="email" name="email" class="w-full p-4 border border-[#C1121F] rounded-lg text-[#092327]" required>
+        </div>
+
+        <!-- Message Field -->
+        <div>
+          <label for="message" class="block text-[#FDF0D5] text-lg mb-2">Your Message</label>
+          <textarea id="message" name="message" rows="6" class="w-full p-4 border border-[#C1121F] rounded-lg text-[#092327]" required></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="text-center">
+          <button type="submit" class="w-[100%] bg-[#C1121F] hover:bg-[#780000] text-white text-lg px-8 py-3 rounded-full transition duration-300">
+            Send Message
+          </button>
+        </div>
+      </form>
+      <!-- Success/Failure Message -->
+      <div id="statusMessage" class="text-center text-lg mt-6 hidden"></div>
+    </div>
+
+    <!-- Contact Image (Right Side) -->
+    <div class="md:w-2/5 w-full md:ml-[200px]">
+      <img src="https://via.placeholder.com/600x400" alt="Contact Us" class="w-full h-full object-cover rounded-lg shadow-lg">
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- EmailJS Script -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  // Initialize EmailJS
+  emailjs.init('your_user_id'); // Replace 'your_user_id' with your actual EmailJS user ID
+
+  // Function to handle the form submission
+  function sendEmail(event) {
+      event.preventDefault(); // Prevent the default form submission
+
+      // Collect form data
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+
+      // Send the email via EmailJS
+      emailjs.sendForm('your_service_id', 'your_template_id', '#contactForm')
+          .then((response) => {
+              // On success, show a success message
+              document.getElementById('statusMessage').innerHTML = "Your message has been sent successfully!";
+              document.getElementById('statusMessage').classList.remove('hidden');
+              document.getElementById('statusMessage').classList.add('text-green-500');
+              
+              // Reset the form
+              document.getElementById('contactForm').reset();
+          })
+          .catch((error) => {
+              // On failure, show an error message
+              document.getElementById('statusMessage').innerHTML = "Something went wrong. Please try again later.";
+              document.getElementById('statusMessage').classList.remove('hidden');
+              document.getElementById('statusMessage').classList.add('text-red-500');
+          });
+  }
+</script>
+<!-- Footer -->
+<footer class="bg-[#003078] py-8 text-white">
+  <div class="max-w-screen-xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
+      <!-- Logo on the Left -->
+      <div class="flex items-center mb-4 md:mb-0">
+          <a href="#"><img class="h-[70px]" src="https://i.ibb.co/0jqdprF/IMG-20241217-181901-removebg-preview.png" alt=""></a>
+      </div>
+
+      <!-- Contact Details in the Center -->
+      <div class="text-center mb-4 md:mb-0 md:relative md:left-[60px]">
+        <h2 class="font-medium text-2xl">Contact Info:</h2>
+          <p class="text-lg text-[#FDF0D5]">Address: 1-4-550/33/15, Gulshan Nagar, <br> Musheerabad, Indira Nagar, Kavadiguda, <br> Hyderabad, Telangana 500080</a></p>
+          <p class="text-lg text-[#FDF0D5]">Email: <a href="mailto:ibscrapbuyers@gmail.com" class="text-[#C1121F] hover:text-[#FDF0D5]">ibscrapbuyers@gmail.com</a></p>
+          <p class="text-lg text-[#FDF0D5]">Phone: +91 9700434163</p>
+      </div>
+
+      <!-- Social Links on the Right -->
+      <div class="flex space-x-10">
+          <!-- Facebook -->
+          <a href="https://www.facebook.com" target="_blank" class="text-[#FDF0D5] hover:text-[#C1121F]">
+              <i class="fab fa-facebook fa-2x"></i>
+          </a>
+          <!-- Instagram -->
+          <a href="https://www.instagram.com" target="_blank" class="text-[#FDF0D5] hover:text-[#C1121F]">
+              <i class="fab fa-instagram fa-2x"></i>
+          </a>
+          <!-- WhatsApp -->
+          <a href="https://wa.me/+1234567890" target="_blank" class="text-[#FDF0D5] hover:text-[#C1121F]">
+              <i class="fab fa-whatsapp fa-2x"></i>
+          </a>
+          <!-- Google -->
+          <a href="https://www.google.com" target="_blank" class="text-[#FDF0D5] hover:text-[#C1121F]">
+              <i class="fab fa-google fa-2x"></i>
+          </a>
+      </div>
+  </div>
+
+  <!-- Map iframe Below the Social Links -->
+  <div class="mt-8 mx-auto flex items-center justify-center">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.8744505561613!2d78.49207007421028!3d17.41781180192986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99094131fe39%3A0x7333d3fa62cc47ca!2sIB%20Traders!5e0!3m2!1sen!2sin!4v1734439181411!5m2!1sen!2sin" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+
+  <!-- Copyright Section -->
+  <div class="text-center mt-6 text-sm text-[#FDF0D5]">
+      <p>&copy; 2024 BrandLogo. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+
+<!-- Font Awesome Script -->
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+
